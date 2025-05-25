@@ -7,26 +7,32 @@
  */
 var merge = function(nums1, m, nums2, n) {
 // make pointers 
-    let i = m-1 
-    let j = n-1 
-    let k = m + n - 1; 
-
-    while ( i >= 0 && j >= 0) { 
-        if ( nums1[i] > nums2[j]) { 
-            nums1[k] = nums1[i]; // place bigger value of i and j at end of array 
-            i-- 
+    let i = m - 1;
+    let j = n - 1; 
+    let k = m + n - 1;
+    
+    while (i >= 0 && j >= 0) { 
+        if (nums1[i] > nums2[j]) { 
+            nums1[k] = nums1[i];
+            i--; 
         } else { 
             nums1[k] = nums2[j];
-            j--
+            j--;
         }
-        k--
+        k--; 
     }
 
-    while (j >= 0 ) { 
+    while (j >= 0) { 
         nums1[k] = nums2[j];
-        j--
-        k-- 
+        j--;
+        k--;
     }
+
+// while i and j is greater than and equal to zero
+
+// if array1[i] is greater than array[j] assign array1[k] to array1[i]
+
+
 
 }
 
